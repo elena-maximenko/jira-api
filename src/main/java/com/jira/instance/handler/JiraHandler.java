@@ -9,13 +9,6 @@ import reactor.core.publisher.Mono;
 
 @Component
 public class JiraHandler {
-    public Mono<ServerResponse> hello(ServerRequest request) {
-        System.out.print("Hello world!");
-
-        return ServerResponse.ok().build();
-               // .body(BodyInserters.fromObject("Hello, Spring Webflux Example!"));
-    }
-
     public Mono<ServerResponse> receive(ServerRequest request) {
         return ServerResponse.ok().contentType(MediaType.TEXT_PLAIN).syncBody("Got it!");
     }
