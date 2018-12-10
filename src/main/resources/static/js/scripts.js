@@ -1,7 +1,8 @@
 function hey() {
-    console.log('hey!');
+    let string = $("#formInput").val();
+    console.log(string);
 
     let xmlHttpRequest = new XMLHttpRequest();
-    xmlHttpRequest.open("POST", "http://localhost:8080/example");
-    xmlHttpRequest.send("gjsvhhv"); // insert data in here
+    xmlHttpRequest.open("POST", "http://localhost:8080/example", true);
+    xmlHttpRequest.send(string);
 }
