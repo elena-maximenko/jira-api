@@ -36,6 +36,6 @@ public class JiraRouter {
                 .route(GET("/example"), request -> ok().render(
                         "hello.html",
                         Rendering.view("hello.html").build()))
-                .andRoute(POST("/example").and(accept(MediaType.APPLICATION_JSON)), jiraHandler::receive);//request -> ok().syncBody("JSON responce"));//render("hello.html"));
+                .andRoute(POST("/example").and(accept(MediaType.APPLICATION_JSON)), jiraHandler::receive);
     }
 }
